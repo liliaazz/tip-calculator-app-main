@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Space Mono', monospace;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.tipCalculator{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:  white;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.showAmount{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.userSurface{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.userSurface label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input {
+    background: hsl(189, 41%, 97%);
+    width: 70%;
+    border: none;
+    height: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    outline: none;
+    direction:RTL;
+    font-family: 'Space Mono', monospace;
+    color: hsl(186, 14%, 43%);
+}
+
+button {
+    width: 75px;
+    height: 30px;
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: hsl(186, 14%, 43%);
+}
+
+.customBtn{
+    width: 75px;
+    height: 30px;
+    color: hsl(186, 14%, 43%);
+    border: none;
+    outline: none;
+    font-family: 'Space Mono', monospace;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.greenbtn{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+}
+
+
+.tipPercentage{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+    height: auto;
+}
+
+
+
+#billInput {
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+}
+
+
+
+.greenbtn:focus{
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+#peopleInput{
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+}
+
+.tip-part, .total-part{
+    display: flex;
+    flex-direction: row;
+    color: hsl(172, 67%, 45%);
+}
+
+
+#tipAmount {
+    margin-left: 100px;
+    font-size: 40px;
+}
+
+#total {
+    font-size: 40px;
+    margin-left: 140px;
+}
+
+.person {
+    color: hsl(186, 14%, 43%);
+    font-size: 12px;
+}
+
+.tipANDtotal{
+    margin-left: 30px;
+    color: white;
+}
+
+#btnReset{
+    display: block;
+    width: 70%;
+    border: none;
+    margin-left: 60px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-size: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+
+}
+
+#message, #warning {
+    font-size: 12px;
+    color: red;
+}
+
+@media only screen and (max-width: 735px) and (min-width: 390px){
+    .tipCalculator
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .userSurface label{
+        font-size: 20px;
+    }
+    #billInput, #peopleInput {
+        margin-left: 7%;
+    }
+    button, .customBtn {
+        width: 80px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .tipPercentage{
+        justify-content: space-around;
+        width: 80%;
+        margin-left: 3%;
+        margin-top: 20px;
+    }
+    #tipAmount ,#total{
+        font-size: 30px;
+    }
+    .container{
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 700px){
+    #total{
+        font-size: 35px;
+        margin-left: 110px;
+    }
+    #tipAmount{
+        font-size: 35px;
+        margin-left: 71px;
+    }
+}
+
+@media only screen and (max-width: 735px) and (min-width: 500px){
+    #total{
+        margin-left: 180px;
+    }
+    #tipAmount{
+        margin-left: 140px;
+    }
+}
+
+@media only screen and (max-width: 390px) and (min-width: 300px){
+    .tipCalculator
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .userSurface label{
+        font-size: 20px;
+    }
+    #billInput, #peopleInput {
+        margin-left: 7%;
+    }
+    button, .customBtn {
+        width: 80px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .tipPercentage{
+        justify-content: space-around;
+        width: 80%;
+        margin-left: 3%;
+        margin-top: 20px;
+    }
+    #tipAmount ,#total{
+        font-size: 30px;
+    }
+    .container{
+        margin-top: 350px;
+    }
+    #total{
+        margin-left: 110px;
+    }
+    #tipAmount{
+        margin-left: 70px;
+    }
+}
